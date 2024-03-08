@@ -21,17 +21,23 @@ searchButton.addEventListener("submit", (event) => {
         result += `<div class="col-md-4 my-3">
                     <div class="card p-3">
                         <img
-                            src="./images/inova.png"
-                            class="card-img-top p-4"
+                            src="${car.image}"
+                            class="card-img-top p-3"
                             alt="..."
+                            style="
+                                aspect-ratio: 4 / 3;
+                                object-fit: cover;
+                                border-radius: 20px;
+                            "
                         />
                         <div class="card-body">
                             <h6 class="card-title">
                                 ${car.manufacture} ${car.model}
                             </h6>
-                            <h5>Rp. ${car.rentPerDay.toLocaleString(
-                                "id-ID"
-                            )} / hari</h5>
+                            <h5>
+                                Rp. ${car.rentPerDay.toLocaleString("id-ID")} /
+                                hari
+                            </h5>
                             <p class="card-text">
                                 Lorem ipsum dolor sit amet, consectetur
                                 adipiscing elit, sed do eiusmod tempor
